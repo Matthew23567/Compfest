@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 991fe383ea62ed9438ed3d564524662e
+guid: a556bc484c0a7bf49b4cf0d3912982cb
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -9,11 +9,6 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: AMainToonVC
     second: {fileID: 2100000, guid: 3eabde589fbdb9e4ba3a7c1cd6dbb5c6, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Cel
-    second: {fileID: 2100000, guid: d4eab542bba6c5c428a4a4659276e152, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -43,7 +38,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.32
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -98,7 +93,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.0032
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

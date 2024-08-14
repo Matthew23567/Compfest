@@ -82,6 +82,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Adjust: 0
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -89,6 +90,7 @@ Material:
     - _ClearCoatSmoothness: 0
     - _Cull: 2
     - _Cutoff: 0.5
+    - _Day_to_Sunset: 1
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
