@@ -96,23 +96,23 @@ Material:
     m_Ints: []
     m_Floats:
     - Vector1_1f430df62e9e43f78b692dc9d0c5f0c1: 3
-    - Vector1_3120f3ef08e24ed7ad2545b229632c0e: 3
+    - Vector1_3120f3ef08e24ed7ad2545b229632c0e: 3.34
     - Vector1_36e77e57f4444bb8befcb5af42ec2206: 1
     - Vector1_3796608d492a4af3bad0df1b0b29a789: 0.8
-    - Vector1_48129a22debe491c8a4f969384108120: 0.8
+    - Vector1_48129a22debe491c8a4f969384108120: 1.03
     - Vector1_4e6cc6d606f94bca96ea75ea7b0b57ff: 2.5
     - Vector1_50a55d2304fa459bbbf0eb93674e8143: 0.5
     - Vector1_55d5cbae0e944728a409562a0358f77b: 1
-    - Vector1_59bebc55ed574463a715f636a75f3f2c: 2
+    - Vector1_59bebc55ed574463a715f636a75f3f2c: 10.1
     - Vector1_6713b40b790d4fc2b5226d8b4d2fc778: 1
     - Vector1_699d4b8a62d04a2282cefe46954bba61: 0.1
-    - Vector1_7087d42637244d299664c0ddff4b748d: 5
-    - Vector1_80338e34b68e4c74bf3c5a09146faeee: 0.6
-    - Vector1_85dd9dd3507f4864bdf8d99c5a02d4aa: 0.5
+    - Vector1_7087d42637244d299664c0ddff4b748d: 1
+    - Vector1_80338e34b68e4c74bf3c5a09146faeee: 0.65
+    - Vector1_85dd9dd3507f4864bdf8d99c5a02d4aa: 0.38
     - Vector1_8a3c17bc55c24f74b5d34326a861a5b4: 1
-    - Vector1_995b84dc13274daf8797b4ac09d664e5: 1
-    - Vector1_ab2dc2a7b97c4558a1db1f4f3c4337f8: 2.5
-    - Vector1_d961d05b35c1484b854e510c761cf6ed: 0.02
+    - Vector1_995b84dc13274daf8797b4ac09d664e5: 3
+    - Vector1_ab2dc2a7b97c4558a1db1f4f3c4337f8: 17.61
+    - Vector1_d961d05b35c1484b854e510c761cf6ed: 0.0002
     - Vector1_de8de09b03144f85a33af7b5432dcebd: 0
     - _AlphaClip: 0
     - _Blend: 0
@@ -145,7 +145,7 @@ Material:
     m_Colors:
     - Color_06bb72f6a5de4527a71bfd655a02882a: {r: 1, g: 1, b: 1, a: 0}
     - Color_bfffef315ee644f790176f5107c33a07: {r: 0.78300005, g: 0.7058763, b: 0.39854702, a: 0}
-    - Color_c2322b56158c4db7a600647a48450453: {r: 1, g: 1, b: 1, a: 0}
+    - Color_c2322b56158c4db7a600647a48450453: {r: 0.90588236, g: 0.90588236, b: 0.90588236, a: 0}
     - Color_cf39f0d5f1d84a648e241e0e717567e3: {r: 0, g: 0.7999997, b: 1, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}

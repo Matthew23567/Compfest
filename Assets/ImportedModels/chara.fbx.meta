@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 09a0abc658a77e045a9821a69a45e2f5
+guid: 56194124518964d4485b2d99d3f44319
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -8,22 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: AMainToonVC
-    second: {fileID: 2100000, guid: 3eabde589fbdb9e4ba3a7c1cd6dbb5c6, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Cel
-    second: {fileID: 2100000, guid: d4eab542bba6c5c428a4a4659276e152, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Glass
-    second: {fileID: 2100000, guid: ad381e67ffd7f1644a32dc006a3e50d4, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: WaterStillTop
-    second: {fileID: 2100000, guid: faa0350214b474d4ca8fb11ff42ed8db, type: 2}
+    second: {fileID: 2100000, guid: 6b2982293d7399845a9d7a973ffccebc, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -108,7 +93,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.01
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

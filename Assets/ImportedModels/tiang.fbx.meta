@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 09a0abc658a77e045a9821a69a45e2f5
+guid: f7eee3c562470db4683b059ae53e1667
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -9,21 +9,6 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: AMainToonVC
     second: {fileID: 2100000, guid: 3eabde589fbdb9e4ba3a7c1cd6dbb5c6, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Cel
-    second: {fileID: 2100000, guid: d4eab542bba6c5c428a4a4659276e152, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Glass
-    second: {fileID: 2100000, guid: ad381e67ffd7f1644a32dc006a3e50d4, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: WaterStillTop
-    second: {fileID: 2100000, guid: faa0350214b474d4ca8fb11ff42ed8db, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
