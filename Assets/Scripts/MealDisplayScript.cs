@@ -38,8 +38,8 @@ public class MealDisplayScript : MonoBehaviour
     [ContextMenu("NoodleToggle")]
     public void NoodleToggle()
     {
-        //kalau hidden (1), show tapi random dikit sizenya
-        if(skinnedMeshRenderer.GetBlendShapeWeight(0) == 1)
+        //kalau hidden (100), show tapi random dikit sizenya
+        if(skinnedMeshRenderer.GetBlendShapeWeight(0) == 100)
         {
             UpdateShapekey(0, Random.Range(0.0f, 0.1f));
         } else //kalau nggak hidden, jadiin hidden
@@ -51,7 +51,7 @@ public class MealDisplayScript : MonoBehaviour
     public void BihunToggle()
     {
         //kalau hidden (1), show tapi random dikit sizenya
-        if (skinnedMeshRenderer.GetBlendShapeWeight(1) == 1)
+        if (skinnedMeshRenderer.GetBlendShapeWeight(1) == 100)
         {
             UpdateShapekey(1, Random.Range(0.0f, 0.1f));
         }
@@ -67,7 +67,7 @@ public class MealDisplayScript : MonoBehaviour
         int ayamAddTemp = 1;
         for (int i = 0; i < 3; i++)
         {
-            if (skinnedMeshRenderer.GetBlendShapeWeight(i + 2) == 1 && ayamAddTemp == 1)
+            if (skinnedMeshRenderer.GetBlendShapeWeight(i + 2) == 100 && ayamAddTemp == 1)
             {
                 UpdateShapekey(i+2, Random.Range(0.0f, 0.05f));
                 ayamAddTemp = 0;
@@ -90,7 +90,7 @@ public class MealDisplayScript : MonoBehaviour
         int basoAddTemp = 1;
         for (int i = 0; i < 4; i++)
         {
-            if (skinnedMeshRenderer.GetBlendShapeWeight(i + 5) == 1 && basoAddTemp == 1)
+            if (skinnedMeshRenderer.GetBlendShapeWeight(i + 5) == 100 && basoAddTemp == 1)
             {
                 UpdateShapekey(i + 5, Random.Range(0.0f, 0.1f));
                 basoAddTemp = 0;
@@ -104,6 +104,42 @@ public class MealDisplayScript : MonoBehaviour
         for (int i = 0; i < 4; i++)
         {
             UpdateShapekey(i + 5, 1);
+        }
+    }
+    [ContextMenu("SayurAdd")]
+    public void SayurAdd()
+    {
+        //ada 3 separate shapekey. ngetoggle sampai semuanya shown.
+        int sayurAddTemp = 1;
+        for (int i = 0; i < 3; i++)
+        {
+            if (skinnedMeshRenderer.GetBlendShapeWeight(i + 9) == 100 && sayurAddTemp == 1)
+            {
+                UpdateShapekey(i + 9, Random.Range(0.0f, 0.1f));
+                sayurAddTemp = 0;
+            }
+        }
+    }
+    [ContextMenu("SayurClear")]
+    public void SayurClear()
+    {
+        //set semuanya jadi 1
+        for (int i = 0; i < 3; i++)
+        {
+            UpdateShapekey(i + 9, 1);
+        }
+    }
+    [ContextMenu("KerupukToggle")]
+    public void KerupukToggle()
+    {
+        //kalau hidden (100), show tapi random dikit sizenya
+        if (skinnedMeshRenderer.GetBlendShapeWeight(12) == 100)
+        {
+            UpdateShapekey(12, Random.Range(0.0f, 0.1f));
+        }
+        else //kalau nggak hidden, jadiin hidden
+        {
+            UpdateShapekey(12, 1);
         }
     }
 
