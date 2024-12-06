@@ -22,8 +22,8 @@ public class MealDisplayScript : MonoBehaviour
             }
         }
 
-        //semua dijadiin 1, karena 0 adalah shown, 1 adalah hidden
-        for (int i=0; i<skinnedMeshRenderer.sharedMesh.blendShapeCount; i++)
+        //semua dijadiin 1 untuk non animasi, karena 0 adalah shown, 1 adalah hidden
+        for (int i=0; i<13; i++)
         {
             UpdateShapekey(i, 1);
         }
@@ -41,7 +41,8 @@ public class MealDisplayScript : MonoBehaviour
         //kalau hidden (100), show tapi random dikit sizenya
         if(skinnedMeshRenderer.GetBlendShapeWeight(0) == 100)
         {
-            UpdateShapekey(0, Random.Range(0.0f, 0.1f));
+            //UpdateShapekey(0, Random.Range(0.0f, 0.1f));
+            StartCoroutine(AnimateIngredientDrop(13, 0));
         } else //kalau nggak hidden, jadiin hidden
         {
             UpdateShapekey(0, 1);
@@ -53,7 +54,8 @@ public class MealDisplayScript : MonoBehaviour
         //kalau hidden (1), show tapi random dikit sizenya
         if (skinnedMeshRenderer.GetBlendShapeWeight(1) == 100)
         {
-            UpdateShapekey(1, Random.Range(0.0f, 0.1f));
+            //UpdateShapekey(1, Random.Range(0.0f, 0.1f));
+            StartCoroutine(AnimateIngredientDrop(14, 1));
         }
         else //kalau nggak hidden, jadiin hidden
         {
@@ -69,7 +71,8 @@ public class MealDisplayScript : MonoBehaviour
         {
             if (skinnedMeshRenderer.GetBlendShapeWeight(i + 2) == 100 && ayamAddTemp == 1)
             {
-                UpdateShapekey(i+2, Random.Range(0.0f, 0.05f));
+                //UpdateShapekey(i+2, Random.Range(0.0f, 0.05f));
+                StartCoroutine(AnimateIngredientDrop(15, i+2));
                 ayamAddTemp = 0;
             }
         }
@@ -92,7 +95,8 @@ public class MealDisplayScript : MonoBehaviour
         {
             if (skinnedMeshRenderer.GetBlendShapeWeight(i + 5) == 100 && basoAddTemp == 1)
             {
-                UpdateShapekey(i + 5, Random.Range(0.0f, 0.1f));
+                //UpdateShapekey(i + 5, Random.Range(0.0f, 0.1f));
+                StartCoroutine(AnimateIngredientDrop(16, i+5));
                 basoAddTemp = 0;
             }
         }
@@ -115,7 +119,8 @@ public class MealDisplayScript : MonoBehaviour
         {
             if (skinnedMeshRenderer.GetBlendShapeWeight(i + 9) == 100 && sayurAddTemp == 1)
             {
-                UpdateShapekey(i + 9, Random.Range(0.0f, 0.1f));
+                //UpdateShapekey(i + 9, Random.Range(0.0f, 0.1f));
+                StartCoroutine(AnimateIngredientDrop(17, i+9));
                 sayurAddTemp = 0;
             }
         }
@@ -135,12 +140,47 @@ public class MealDisplayScript : MonoBehaviour
         //kalau hidden (100), show tapi random dikit sizenya
         if (skinnedMeshRenderer.GetBlendShapeWeight(12) == 100)
         {
-            UpdateShapekey(12, Random.Range(0.0f, 0.1f));
+            //UpdateShapekey(12, Random.Range(0.0f, 0.1f));
+            StartCoroutine(AnimateIngredientDrop(18, 12));
         }
         else //kalau nggak hidden, jadiin hidden
         {
             UpdateShapekey(12, 1);
         }
+    }
+
+    //13 : Baso
+    //14 : Bihun
+    //15 : Ayam
+    //16 : Baso
+    //17 : Sayur
+    //18 : Kerupuk
+    private IEnumerator AnimateIngredientDrop(int dropIndex, int unhideIndex)
+    {
+        Debug.Log("coroutine start" + dropIndex + " and " +unhideIndex);
+        float animationDuration = 1f; // Adjust as needed
+        float elapsedTime = 0f;
+        float unhideTiming = 0.9f;
+        bool tempSwitch = true;
+
+        while (elapsedTime < animationDuration)
+        {
+            float t = elapsedTime / animationDuration; // Normalized time (0 to 1)
+            float shapeKeyValue = Mathf.Lerp(0f, 100f, t); // Interpolate from 0 to 100
+
+            skinnedMeshRenderer.SetBlendShapeWeight(dropIndex, shapeKeyValue);
+
+            if (t > unhideTiming && tempSwitch) {
+                UpdateShapekey(unhideIndex, Random.Range(0.0f, 0.1f));
+                tempSwitch = false;
+            }
+            elapsedTime += Time.deltaTime;
+            yield return null; // Wait for the next frame
+        }
+
+        // Reset the shape key after the animation
+        skinnedMeshRenderer.SetBlendShapeWeight(dropIndex, 0f);
+        Debug.Log("coroutine end");
     }
 
     public void UpdateShapekey(int shapekeyIndex, float value)
